@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         
         task_0(numberOne: 4, numberTwo: 4)
         task_1(number: 5)
+        task_2(number: 5)
         
     }
 
@@ -33,6 +34,12 @@ class ViewController: UIViewController {
         
         print("Square of number \(number): \(square)")
         print("Cube of number \(number): \(cube)")
+    }
+    
+    func task_2(number: Int) {
+        for i in 0...number {
+            print(i, number-i)
+        }
     }
 }
 
