@@ -13,6 +13,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         task_0(numberOne: 4, numberTwo: 4)
+        task_1(number: 5)
         
     }
 
@@ -26,5 +27,12 @@ class ViewController: UIViewController {
         }
     }
 
+    func task_1(number: Int) {
+        let square = number * number
+        let cube = number * square
+        
+        print("Square of number \(number): \(square)")
+        print("Cube of number \(number): \(cube)")
+    }
 }
 
