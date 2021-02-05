@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         task_1(number: 5)
         task_2(number: 5)
         task_3(number: 5)
+        task_4(number: 5)
         
     }
 
@@ -58,6 +59,31 @@ class ViewController: UIViewController {
             }
         }
         print("Total: \(count)")
+    }
+    
+    func task_4(number: Int){
+        
+        if number == 0 {
+            print("\(number) - It's not perfect number")
+            return
+        }
+        
+        var array = [Int]()
+        var sum = 0
+
+        for i in 1...number-1 {
+            if (number % i) == 0 {
+                array.append(i)
+                sum += i
+            }
+        }
+        
+        if sum == number {
+            print("\(number) - It's perfect number")
+            print(array)
+        } else {
+            print("\(number) - It's not perfect number")
+        }
     }
 }
 
