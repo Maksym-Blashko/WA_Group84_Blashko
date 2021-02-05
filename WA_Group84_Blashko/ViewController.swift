@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         task_2(number: 5)
         task_3(number: 5)
         task_4(number: 5)
+        task_1_Block2(endDate: 2021)
         
     }
 
@@ -84,6 +85,23 @@ class ViewController: UIViewController {
         } else {
             print("\(number) - It's not perfect number")
         }
+    }
+    
+    func task_1_Block2(endDate: Int) {
+        
+        let beginDate = 1826
+        let percentPerYear = 6.0
+        var stateMoney = 24.0
+        
+        if endDate <= beginDate {
+            print("Begin date cannot be less than end date")
+            return
+        }
+        
+        for _ in beginDate...endDate {
+            stateMoney += stateMoney / 100 * percentPerYear
+        }
+        print("Total state of money for \(endDate) = \(String(format: "%.2f", stateMoney))")
     }
 }
 
