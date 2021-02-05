@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         task_0(numberOne: 4, numberTwo: 4)
         task_1(number: 5)
         task_2(number: 5)
+        task_3(number: 5)
         
     }
 
@@ -40,6 +41,23 @@ class ViewController: UIViewController {
         for i in 0...number {
             print(i, number-i)
         }
+    }
+    
+    func task_3(number: Int){
+        
+        if number == 0 {
+            print("You cannot divide by zero")
+            return
+        }
+        
+        var count = 0
+        for i in 1...number {
+            if (number % i) == 0 {
+                print("\(i)")
+                count += 1
+            }
+        }
+        print("Total: \(count)")
     }
 }
 
