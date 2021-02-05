@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         task_4(number: 5)
         task_1_Block2(endDate: 2021)
         task_2_Block2()
+        task_3_Block2()
         
     }
 
@@ -117,6 +118,24 @@ class ViewController: UIViewController {
             totalExpenses += expenses
         }
         print("You are not enough \(totalExpenses - income), you should have \(totalExpenses)")
+    }
+    
+    func task_3_Block2() {
+        
+        let incomePerMonth = 700
+        var expensesPerMonth = 1000
+        let percentPerMonth = 3
+        var totalMonths = 0
+        var income = 2400
+        var expenses = 0
+        
+        while income >= expenses {
+            expensesPerMonth += expensesPerMonth / 100 * percentPerMonth
+            totalMonths += 1
+            income += incomePerMonth
+            expenses += expensesPerMonth
+        }
+        print("You can live \(totalMonths) months")
     }
 
 }
