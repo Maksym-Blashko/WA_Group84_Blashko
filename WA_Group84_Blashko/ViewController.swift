@@ -11,9 +11,20 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        task_0(numberOne: 4, numberTwo: 4)
+        
     }
 
+    func task_0(numberOne: Int, numberTwo: Int) {
+        if numberOne > numberTwo {
+            print("First number: \(numberOne) is bigger than second: \(numberTwo)")
+        } else if numberOne < numberTwo {
+            print("Second number: \(numberTwo) is bigger than first: \(numberOne)")
+        } else {
+            print("Numbers are equal")
+        }
+    }
 
 }
 
