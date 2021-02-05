@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         task_3(number: 5)
         task_4(number: 5)
         task_1_Block2(endDate: 2021)
+        task_2_Block2()
         
     }
 
@@ -103,5 +104,20 @@ class ViewController: UIViewController {
         }
         print("Total state of money for \(endDate) = \(String(format: "%.2f", stateMoney))")
     }
+    
+    func task_2_Block2() {
+        
+        let income = 700 * 10
+        var expenses = 1000
+        let percentPerMonth = 3
+        var totalExpenses = 0
+        
+        for _ in 1...10 {
+            expenses += expenses / 100 * percentPerMonth
+            totalExpenses += expenses
+        }
+        print("You are not enough \(totalExpenses - income), you should have \(totalExpenses)")
+    }
+
 }
 
