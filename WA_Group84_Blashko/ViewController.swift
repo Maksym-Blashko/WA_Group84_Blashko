@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         task_1_Block2(endDate: 2021)
         task_2_Block2()
         task_3_Block2()
+        task_4_Block2(number: 123456)
         
     }
 
@@ -138,5 +139,21 @@ class ViewController: UIViewController {
         print("You can live \(totalMonths) months")
     }
 
+    func task_4_Block2(number: Int) {
+        
+        let stringNumber = String(number)
+        var array = [Character]()
+        var newNumber: String = ""
+        
+        for i in stringNumber {
+            array.append(i)
+        }
+        
+        for i in 1...array.count {
+            newNumber += String(array[array.count-i])
+        }
+        print(newNumber)
+    }
+    
 }
 
