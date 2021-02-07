@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Assignment 2
         task_0(numberOne: 4, numberTwo: 4)
         task_1(number: 5)
         task_2(number: 5)
@@ -22,8 +23,11 @@ class ViewController: UIViewController {
         task_3_Block2()
         task_4_Block2(number: 123456)
         
+        // Assignment 3
+        assignment_3_Task_1()
     }
 
+    // MARK: Assignment 2
     func task_0(numberOne: Int, numberTwo: Int) {
         if numberOne > numberTwo {
             print("First number: \(numberOne) is bigger than second: \(numberTwo)")
@@ -155,5 +159,11 @@ class ViewController: UIViewController {
         print(newNumber)
     }
     
+    
+    // MARK: Assignment 3
+    func assignment_3_Task_1() {
+        let name = "Maksym"
+        print(name.count)
+    }
 }
 
