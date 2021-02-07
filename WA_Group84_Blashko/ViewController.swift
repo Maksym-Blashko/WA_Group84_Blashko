@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         // Assignment 3
         assignment_3_Task_1()
         assignment_3_Task_2()
+        assignment_3_Task_3()
     }
 
     // MARK: Assignment 2
@@ -175,6 +176,32 @@ class ViewController: UIViewController {
         } else {
             print("Отчество не содержит ич/на")
         }
+    }
+    
+    func assignment_3_Task_3() {
+        let name = "MaksymBlashko"
+        var str1: String = ""
+        var str2: String = ""
+        var str3: String = ""
+        var firstLoop = true
+        var firstWord = true
+                        
+        for i in name {
+            if firstLoop {
+                str1 += String(i)
+                firstLoop = false
+                continue
+            }
+
+            if i.isLowercase && firstWord {
+                str1 += String(i)
+            } else {
+                firstWord = false
+                str2 += String(i)
+            }
+        }
+        str3 = str1 + " " + str2
+        print(str3)
     }
 }
 
