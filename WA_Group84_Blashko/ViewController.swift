@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         assignment_3_Task_1()
         assignment_3_Task_2()
         assignment_3_Task_3()
+        assignment_3_Task_4()
     }
 
     // MARK: Assignment 2
@@ -203,5 +204,21 @@ class ViewController: UIViewController {
         str3 = str1 + " " + str2
         print(str3)
     }
+    
+    func assignment_3_Task_4() {
+        let name = "Ось"
+        var array = [Character]()
+        var newName: String = ""
+        
+        for i in name {
+            array.append(i)
+        }
+        
+        for i in 1...array.count {
+            newName += String(array[array.count-i])
+        }
+        print(newName)
+    }
+    
 }
 
