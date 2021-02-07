@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         
         // Assignment 3
         assignment_3_Task_1()
+        assignment_3_Task_2()
     }
 
     // MARK: Assignment 2
@@ -164,6 +165,16 @@ class ViewController: UIViewController {
     func assignment_3_Task_1() {
         let name = "Maksym"
         print(name.count)
+    }
+    
+    func assignment_3_Task_2() {
+        let name = "Анатольевич"
+        
+        if name.hasSuffix("ич") || name.hasSuffix("на") {
+            print("Отчество содержит ич/на")
+        } else {
+            print("Отчество не содержит ич/на")
+        }
     }
 }
 
