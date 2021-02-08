@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         assignment_3_Task_2()
         assignment_3_Task_3()
         assignment_3_Task_4()
+        assignment_3_Task_5()
     }
 
     // MARK: Assignment 2
@@ -220,5 +221,26 @@ class ViewController: UIViewController {
         print(newName)
     }
     
+    func assignment_3_Task_5() {
+        let number = "1234567"
+        var newNumber: String = ""
+        var pointCount = 1
+        var totalCount = 1
+        var firsPoint = number.count % 3
+        
+        for i in number {
+            if (pointCount == 3 || pointCount == firsPoint) && totalCount != number.count {
+                newNumber += String(i) + ","
+                totalCount += 1
+                pointCount = 1
+                firsPoint = 0
+            } else {
+                newNumber += String(i)
+                pointCount += 1
+                totalCount += 1
+            }
+        }
+        print(newNumber)
+    }
 }
 
