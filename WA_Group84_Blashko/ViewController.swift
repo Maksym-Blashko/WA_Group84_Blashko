@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         assignment_3_Task_3()
         assignment_3_Task_4()
         assignment_3_Task_5()
+        assignment_3_Task_6()
     }
 
     // MARK: Assignment 2
@@ -241,6 +242,32 @@ class ViewController: UIViewController {
             }
         }
         print(newNumber)
+    }
+    
+    func assignment_3_Task_6() {
+        var valid = [String]()
+        let pass = "aD_1"
+        
+        for i in pass {
+            if i.isNumber && !valid.contains("a") {
+                valid.append("a")
+            }
+            if i.isUppercase && !valid.contains("b") {
+                valid.append("b")
+            }
+            if i.isLowercase && !valid.contains("c") {
+                valid.append("c")
+            }
+            if (i.isSymbol || i.isPunctuation || i.isMathSymbol) && !valid.contains("d") {
+                valid.append("d")
+            }
+        }
+        
+        if valid.count == 4 {
+            print("Strong password")
+        } else {
+            print("Password is not strong")
+        }
     }
 }
 
