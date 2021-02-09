@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         assignment_3_Task_4()
         assignment_3_Task_5()
         assignment_3_Task_6()
+        assignment_3_Task_7()
     }
 
     // MARK: Assignment 2
@@ -268,6 +269,32 @@ class ViewController: UIViewController {
         } else {
             print("Password is not strong")
         }
+    }
+    
+    func assignment_3_Task_7() {
+        var array = [9, 1, 2, 5, 1, 7]
+        print("Unsort - \(array)")
+        
+        // sort
+        for i in 0...array.count-1 {
+            for j in 0...array.count-2 {
+                if array[i] < array[j] {
+                    array.swapAt(i, j)
+                }
+            }
+        }
+        
+        // remove
+        var arrayWithoutDuplicate = [Int]()
+        
+        for value in array {
+            if !arrayWithoutDuplicate.contains(value) {
+                arrayWithoutDuplicate.append(value)
+            }
+        }
+        
+        print("Sort - \(array)")
+        print("Without duplicate - \(arrayWithoutDuplicate)")
     }
 }
 
