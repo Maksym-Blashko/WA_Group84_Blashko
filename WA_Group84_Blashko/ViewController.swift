@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         assignment_3_Task_5()
         assignment_3_Task_6()
         assignment_3_Task_7()
+        assignment_3_Task_8()
     }
 
     // MARK: Assignment 2
@@ -295,6 +296,26 @@ class ViewController: UIViewController {
         
         print("Sort - \(array)")
         print("Without duplicate - \(arrayWithoutDuplicate)")
+    }
+    
+    func assignment_3_Task_8() {
+        let alphabet: [String: String] = ["А": "A", "а": "a", "Б": "B", "б": "b", "В": "V", "в": "v", "Г": "G", "г": "g", "Д": "D", "д": "d", "Е": "E", "е": "e", "Ё": "E", "ё": "e", "Ж": "ZH", "ж": "zh", "З": "Z", "з": "z", "И": "I", "и": "i", "Й": "I", "й": "i", "К": "K", "к": "k", "Л": "L", "л": "l","М": "M", "м": "m", "Н": "N", "н": "n", "О": "O", "о": "o", "П": "P", "п": "p", "Р": "R", "р": "r", "С": "S", "с": "s", "Т": "T", "т": "t", "У": "U", "у": "u", "Ф": "F", "ф": "f", "Х": "H", "х": "h", "Ц": "C", "ц": "c", "Ч": "CH", "ч": "ch", "Ш": "SH", "ш": "sh", "Щ": "SH", "щ": "sh", "Ъ": "", "ъ": "", "Ы": "Y", "ы": "y", "Ь": "", "ь": "", "Э": "E", "э": "e", "Ю": "JU", "ю": "ju", "Я": "YA", "я": "ya"]
+        
+        func translate(word: String) -> String {
+            var translatedWord: String = ""
+            
+            for i in word {
+                if let transLetter = alphabet[String(i)] {
+                    translatedWord += transLetter
+                } else {
+                    translatedWord += ""
+                }
+            }
+            return translatedWord
+        }
+        
+        print(translate(word: "ЯЗЗЬ"))
+        print(translate(word: "морДа"))
     }
 }
 
