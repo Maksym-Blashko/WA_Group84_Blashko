@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         assignment_3_Task_7()
         assignment_3_Task_8()
         assignment_3_Task_9()
+        assignment_3_Task_10()
     }
 
     // MARK: Assignment 2
@@ -330,6 +331,16 @@ class ViewController: UIViewController {
             }
         }
         print(result)
+    }
+    
+    func assignment_3_Task_10() {
+        let antimat: Set<String> = ["fuck", "fak"]
+        var someText = "hello my fak"
+        
+        for i in antimat {
+            someText = someText.replacingOccurrences(of: i, with: "***")
+        }
+        print(someText)
     }
 }
 
