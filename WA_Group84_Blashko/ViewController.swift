@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         assignment_3_Task_6()
         assignment_3_Task_7()
         assignment_3_Task_8()
+        assignment_3_Task_9()
     }
 
     // MARK: Assignment 2
@@ -316,6 +317,19 @@ class ViewController: UIViewController {
         
         print(translate(word: "ЯЗЗЬ"))
         print(translate(word: "морДа"))
+    }
+    
+    func assignment_3_Task_9() {
+        let keyWord = "da"
+        let array = ["lada", "sedan", "baklazhan"]
+        var result = [String]()
+        
+        for i in array {
+            if i.lowercased().contains(keyWord) {
+                result.append(i)
+            }
+        }
+        print(result)
     }
 }
 
